@@ -1,3 +1,4 @@
+
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 
@@ -13,15 +14,11 @@ class WatchlistService {
   })  : _firestore = firestore ?? FirebaseFirestore.instance,
         _auth = auth ?? FirebaseAuth.instance;
 
-  // ============================================================
-  // CURRENT USER
-  // ============================================================
+  // current user
 
   User? get currentUser => _auth.currentUser;
 
-  // ============================================================
-  // WATCHLIST COLLECTION
-  // ============================================================
+  // watchlist collection
 
   CollectionReference<Map<String, dynamic>>? _getWatchlistCollection() {
     final user = currentUser;
@@ -36,9 +33,7 @@ class WatchlistService {
         .collection('watchlist');
   }
 
-  // ============================================================
-  // CHECK IF MOVIE IS IN WATCHLIST
-  // ============================================================
+  // check watchlist
 
   Future<bool> isInWatchlist(int movieId) async {
     final collection = _getWatchlistCollection();
@@ -54,9 +49,7 @@ class WatchlistService {
     return doc.exists;
   }
 
-  // ============================================================
-  // ADD MOVIE TO WATCHLIST
-  // ============================================================
+  // add to watchlist
 
   Future<void> addToWatchlist(
       MovieDetailsModel movie,
@@ -89,9 +82,7 @@ class WatchlistService {
     });
   }
 
-  // ============================================================
-  // REMOVE MOVIE FROM WATCHLIST
-  // ============================================================
+  // remove from watchlist
 
   Future<void> removeFromWatchlist(
       int movieId,
@@ -109,9 +100,7 @@ class WatchlistService {
         .delete();
   }
 
-  // ============================================================
-  // TOGGLE WATCHLIST
-  // ============================================================
+  // toggle watchlist
 
   Future<bool> toggleWatchlist(
       MovieDetailsModel movie,
@@ -135,9 +124,7 @@ class WatchlistService {
     return true;
   }
 
-  // ============================================================
-  // WATCHLIST STREAM
-  // ============================================================
+  // watchlist stream
 
   Stream<QuerySnapshot<Map<String, dynamic>>>
   getWatchlistStream() {
@@ -155,9 +142,7 @@ class WatchlistService {
         .snapshots();
   }
 
-  // ============================================================
-  // WATCHLIST COUNT STREAM
-  // ============================================================
+  // watchlist count
 
   Stream<int> getWatchlistCountStream() {
     final collection = _getWatchlistCollection();

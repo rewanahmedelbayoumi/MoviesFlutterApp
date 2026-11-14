@@ -1,3 +1,4 @@
+
 import 'package:flutter/material.dart';
 
 import '../auth/login_screen.dart';
@@ -24,7 +25,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
 
   int currentPage = 0;
 
-  // ================= NEXT =================
+  // next
 
   void nextPage() {
     final l10n = AppLocalizations.of(context)!;
@@ -45,7 +46,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
     finishOnboarding();
   }
 
-  // ================= BACK =================
+  // back
 
   void previousPage() {
     if (currentPage == 0) return;
@@ -57,7 +58,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
     );
   }
 
-  // ================= FINISH =================
+  // finish
 
   void finishOnboarding() {
     Navigator.pushReplacement(
@@ -69,7 +70,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
     );
   }
 
-  // ================= DISPOSE =================
+  // dispose
 
   @override
   void dispose() {
@@ -77,7 +78,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
     super.dispose();
   }
 
-  // ================= BUILD =================
+  // build
 
   @override
   Widget build(BuildContext context) {
@@ -94,7 +95,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
       body: SafeArea(
         child: Stack(
           children: [
-            // ================= ONBOARDING PAGES =================
+            // onboarding pages
 
             Positioned.fill(
               child: PageView.builder(
@@ -139,7 +140,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
               ),
             ),
 
-            // ================= LANGUAGE SWITCHER =================
+            // language switcher
 
             const PositionedDirectional(
               top: 14,

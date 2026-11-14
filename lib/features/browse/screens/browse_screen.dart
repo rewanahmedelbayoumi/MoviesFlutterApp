@@ -1,3 +1,4 @@
+
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -159,9 +160,7 @@ class _BrowseViewState
     );
   }
 
-  // ============================================================
-  // HEADER
-  // ============================================================
+  // header
 
   Widget _buildHeader() {
     final l10n =
@@ -202,9 +201,7 @@ class _BrowseViewState
     );
   }
 
-  // ============================================================
-  // GENRES
-  // ============================================================
+  // genres
 
   Widget _buildGenres() {
     final l10n =
@@ -372,9 +369,7 @@ class _BrowseViewState
     }
   }
 
-  // ============================================================
-  // MOVIES GRID
-  // ============================================================
+  // movies grid
 
   Widget _buildMoviesGrid(
       BrowseSuccess state,
@@ -456,9 +451,7 @@ class _BrowseViewState
     );
   }
 
-  // ============================================================
-  // ERROR
-  // ============================================================
+  // error
 
   Widget _buildError(
       String message,
@@ -539,9 +532,7 @@ class _BrowseViewState
     );
   }
 
-  // ============================================================
-  // NAVIGATION
-  // ============================================================
+  // navigation
 
   void _onNavigationTap(
       int index,

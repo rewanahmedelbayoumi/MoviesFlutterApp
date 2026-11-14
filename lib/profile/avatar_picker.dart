@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-
 import 'profile_colors.dart';
 
-// ================= AVATAR MODEL =================
+// avatar model
 
 class Avatar {
   final String name;
@@ -14,7 +13,7 @@ class Avatar {
   });
 }
 
-// ================= AVATAR PICKER =================
+// avatar picker
 
 class AvatarPicker extends StatefulWidget {
   final int selectedAvatar;
@@ -26,7 +25,7 @@ class AvatarPicker extends StatefulWidget {
     required this.onAvatarSelected,
   });
 
-  // ================= CATEGORIES =================
+  // categories
 
   static const List<Map<String, dynamic>> categories = [
     {
@@ -120,7 +119,7 @@ class AvatarPicker extends StatefulWidget {
     },
   ];
 
-  // ================= ALL AVATARS =================
+  // all avatars
 
   static List<Avatar> get allAvatars {
     final List<Avatar> result = [];
@@ -158,7 +157,7 @@ class _AvatarPickerState
 
       child: Column(
         children: [
-          // ================= HANDLE =================
+          // handle
 
           const SizedBox(height: 12),
 
@@ -174,7 +173,7 @@ class _AvatarPickerState
 
           const SizedBox(height: 22),
 
-          // ================= TITLE =================
+          // title
 
           const Text(
             'Choose Your Avatar',
@@ -197,7 +196,7 @@ class _AvatarPickerState
 
           const SizedBox(height: 22),
 
-          // ================= CATEGORIES =================
+          // categories
 
           Expanded(
             child: ListView.builder(
@@ -225,7 +224,7 @@ class _AvatarPickerState
                   CrossAxisAlignment.start,
 
                   children: [
-                    // ================= CATEGORY TITLE =================
+                    // category title
 
                     Padding(
                       padding:
@@ -249,7 +248,7 @@ class _AvatarPickerState
 
                     const SizedBox(height: 5),
 
-                    // ================= AVATARS =================
+                    // avatars
 
                     SizedBox(
                       height: 150,
@@ -309,7 +308,7 @@ class _AvatarPickerState
 
                               child: Column(
                                 children: [
-                                  // ================= AVATAR IMAGE =================
+                                  // avatar image
 
                                   AnimatedContainer(
                                     duration:
@@ -407,7 +406,7 @@ class _AvatarPickerState
                                     height: 10,
                                   ),
 
-                                  // ================= NAME =================
+                                  // name
 
                                   Text(
                                     avatar.name,

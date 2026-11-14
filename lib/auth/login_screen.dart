@@ -1,3 +1,4 @@
+
 import 'package:flutter/material.dart';
 
 import '../l10n/app_localizations.dart';
@@ -31,7 +32,7 @@ class _LoginScreenState extends State<LoginScreen> {
   bool isLoading = false;
   bool obscurePassword = true;
 
-  // ================= LOGIN =================
+  // login
 
   Future<void> login() async {
     final l10n =
@@ -72,7 +73,7 @@ class _LoginScreenState extends State<LoginScreen> {
     );
   }
 
-  // ================= MESSAGE =================
+  // message
 
   void showMessage(String message) {
     ScaffoldMessenger.of(context).showSnackBar(
@@ -84,7 +85,7 @@ class _LoginScreenState extends State<LoginScreen> {
     );
   }
 
-  // ================= NAVIGATION =================
+  // navigation
 
   void goToRegister() {
     Navigator.pushNamed(
@@ -100,7 +101,7 @@ class _LoginScreenState extends State<LoginScreen> {
     );
   }
 
-  // ================= BUILD =================
+  // build
 
   @override
   Widget build(BuildContext context) {
@@ -325,7 +326,7 @@ class _LoginScreenState extends State<LoginScreen> {
     );
   }
 
-  // ================= DISPOSE =================
+  // dispose
 
   @override
   void dispose() {

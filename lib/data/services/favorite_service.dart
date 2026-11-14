@@ -1,3 +1,4 @@
+
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 
@@ -24,9 +25,7 @@ class FavoriteService {
         .collection('favorites');
   }
 
-  // ============================================================
-  // CHECK IF MOVIE IS FAVORITE
-  // ============================================================
+  // check favorite
 
   Future<bool> isFavorite(int movieId) async {
     final user = currentUser;
@@ -44,9 +43,7 @@ class FavoriteService {
     return doc.exists;
   }
 
-  // ============================================================
-  // ADD FAVORITE
-  // ============================================================
+  // add favorite
 
   Future<void> addFavorite(
       MovieDetailsModel movie,
@@ -83,9 +80,7 @@ class FavoriteService {
     });
   }
 
-  // ============================================================
-  // REMOVE FAVORITE
-  // ============================================================
+  // remove favorite
 
   Future<void> removeFavorite(
       int movieId,
@@ -105,9 +100,7 @@ class FavoriteService {
     ).delete();
   }
 
-  // ============================================================
-  // TOGGLE FAVORITE
-  // ============================================================
+  // toggle favorite
 
   Future<bool> toggleFavorite(
       MovieDetailsModel movie,
@@ -139,9 +132,7 @@ class FavoriteService {
     return true;
   }
 
-  // ============================================================
-  // FAVORITES STREAM
-  // ============================================================
+  // favorites stream
 
   Stream<QuerySnapshot<Map<String, dynamic>>> getFavoritesStream() {
     final user = currentUser;
@@ -160,9 +151,7 @@ class FavoriteService {
         .snapshots();
   }
 
-  // ============================================================
-  // FAVORITES COUNT
-  // ============================================================
+  // favorites count
 
   Stream<int> getFavoritesCountStream() {
     final user = currentUser;

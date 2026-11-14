@@ -1,3 +1,4 @@
+
 import 'package:flutter/material.dart';
 
 import '../l10n/app_localizations.dart';
@@ -45,7 +46,7 @@ class _RegisterScreenState
 
   int selectedAvatar = 0;
 
-  // ================= REGISTER =================
+  // register
 
   Future<void> register() async {
     final l10n =
@@ -90,7 +91,7 @@ class _RegisterScreenState
     Navigator.pop(context);
   }
 
-  // ================= MESSAGE =================
+  // message
 
   void showMessage(String message) {
     ScaffoldMessenger.of(context)
@@ -105,7 +106,7 @@ class _RegisterScreenState
     );
   }
 
-  // ================= BUILD =================
+  // build
 
   @override
   Widget build(BuildContext context) {
@@ -124,7 +125,7 @@ class _RegisterScreenState
           ),
           child: Column(
             children: [
-              // ================= HEADER =================
+              // header
 
               SizedBox(
                 height: 60,
@@ -135,7 +136,7 @@ class _RegisterScreenState
                 ),
               ),
 
-              // ================= AVATAR SELECTOR =================
+              // avatar selector
 
               Expanded(
                 child:
@@ -153,7 +154,7 @@ class _RegisterScreenState
                 ),
               ),
 
-              // ================= AVATAR TITLE =================
+              // avatar title
 
               Text(
                 l10n.avatar,
@@ -168,7 +169,7 @@ class _RegisterScreenState
                 height: 12,
               ),
 
-              // ================= REGISTER FORM =================
+              // register form
 
               RegisterForm(
                 nameController:
@@ -218,7 +219,7 @@ class _RegisterScreenState
                 height: 12,
               ),
 
-              // ================= LOGIN LINK =================
+              // login link
 
               Row(
                 mainAxisAlignment:
@@ -261,7 +262,7 @@ class _RegisterScreenState
                 height: 12,
               ),
 
-              // ================= LANGUAGE =================
+              // language
 
               const LanguageSwitcher(),
 
@@ -275,7 +276,7 @@ class _RegisterScreenState
     );
   }
 
-  // ================= DISPOSE =================
+  // dispose
 
   @override
   void dispose() {

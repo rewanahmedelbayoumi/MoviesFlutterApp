@@ -1,3 +1,4 @@
+
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -98,9 +99,7 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 
-  // ============================================================
-  // HOME CONTENT
-  // ============================================================
+  // home content
 
   Widget _buildHome(
       HomeSuccess state,
@@ -177,9 +176,7 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 
-  // ============================================================
-  // AVAILABLE NOW / HERO
-  // ============================================================
+  // available now
 
   Widget _buildAvailableNow(
       List<MovieModel> movies,
@@ -399,9 +396,7 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 
-  // ============================================================
-  // SIDE POSTER
-  // ============================================================
+  // side poster
 
   Widget _buildSidePoster(
       MovieModel movie,
@@ -454,9 +449,7 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 
-  // ============================================================
-  // SECTION TITLE
-  // ============================================================
+  // section title
 
   Widget _buildSectionTitle({
     required String title,
@@ -516,9 +509,7 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 
-  // ============================================================
-  // MOVIES LIST
-  // ============================================================
+  // movies list
 
   Widget _buildMoviesList(
       List<MovieModel> movies,
@@ -589,9 +580,7 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 
-  // ============================================================
-  // MOVIE DETAILS
-  // ============================================================
+  // movie details
 
   void _openMovieDetails(
       int movieId,
@@ -607,9 +596,7 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 
-  // ============================================================
-  // NAVIGATION
-  // ============================================================
+  // navigation
 
   void _onNavigationTap(
       int index,
@@ -663,9 +650,7 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 
-  // ============================================================
-  // ERROR
-  // ============================================================
+  // error
 
   Widget _buildError(
       String message,

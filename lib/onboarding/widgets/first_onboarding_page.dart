@@ -1,3 +1,4 @@
+
 import 'package:flutter/material.dart';
 
 import '../onboarding_model.dart';
@@ -19,7 +20,7 @@ class FirstOnboardingPage extends StatelessWidget {
     return Stack(
       fit: StackFit.expand,
       children: [
-        // ================= BACKGROUND IMAGE =================
+        // background image
 
         Image.asset(
           item.image,
@@ -42,7 +43,7 @@ class FirstOnboardingPage extends StatelessWidget {
           },
         ),
 
-        // ================= DARK GRADIENT =================
+        // dark gradient
 
         Container(
           decoration: const BoxDecoration(
@@ -69,7 +70,7 @@ class FirstOnboardingPage extends StatelessWidget {
           ),
         ),
 
-        // ================= BOTTOM CONTENT =================
+        // bottom content
 
         SafeArea(
           child: Align(

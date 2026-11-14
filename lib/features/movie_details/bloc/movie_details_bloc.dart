@@ -1,3 +1,4 @@
+
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../../data/repositories/movie_repository.dart';
@@ -29,9 +30,7 @@ class MovieDetailsBloc
     on<ToggleWatchlist>(_toggleWatchlist);
   }
 
-  // ============================================================
-  // GET MOVIE DETAILS
-  // ============================================================
+  // get movie details
 
   Future<void> _getMovieDetails(
       GetMovieDetails event,
@@ -77,9 +76,7 @@ class MovieDetailsBloc
     }
   }
 
-  // ============================================================
-  // TOGGLE FAVORITE
-  // ============================================================
+  // toggle favorite
 
   Future<void> _toggleFavorite(
       ToggleFavorite event,
@@ -111,9 +108,7 @@ class MovieDetailsBloc
     }
   }
 
-  // ============================================================
-  // TOGGLE WATCHLIST
-  // ============================================================
+  // toggle watchlist
 
   Future<void> _toggleWatchlist(
       ToggleWatchlist event,

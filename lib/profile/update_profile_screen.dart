@@ -1,3 +1,4 @@
+
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
@@ -43,7 +44,7 @@ class _UpdateProfileScreenState
     loadSelectedAvatar();
   }
 
-  // ================= LOAD AVATAR =================
+  // load avatar
 
   Future<void> loadSelectedAvatar() async {
     final User? user =
@@ -73,7 +74,7 @@ class _UpdateProfileScreenState
     } catch (_) {}
   }
 
-  // ================= AVATAR PICKER =================
+  // avatar picker
 
   void showAvatarPicker() {
     showModalBottomSheet(
@@ -93,7 +94,7 @@ class _UpdateProfileScreenState
     );
   }
 
-  // ================= SAVE CHANGES =================
+  // save changes
 
   Future<void> saveChanges() async {
     final l10n =
@@ -190,7 +191,7 @@ class _UpdateProfileScreenState
     }
   }
 
-  // ================= MESSAGE =================
+  // message
 
   void showMessage(String message) {
     ScaffoldMessenger.of(context).showSnackBar(
@@ -204,7 +205,7 @@ class _UpdateProfileScreenState
     );
   }
 
-  // ================= DISPOSE =================
+  // dispose
 
   @override
   void dispose() {
@@ -214,7 +215,7 @@ class _UpdateProfileScreenState
     super.dispose();
   }
 
-  // ================= BUILD =================
+  // build
 
   @override
   Widget build(BuildContext context) {
@@ -391,7 +392,7 @@ class _UpdateProfileScreenState
     );
   }
 
-  // ================= SELECTED AVATAR =================
+  // selected avatar
 
   Widget _buildSelectedAvatar() {
     if (selectedAvatar < 0 ||
@@ -434,7 +435,7 @@ class _UpdateProfileScreenState
     );
   }
 
-  // ================= TEXT FIELD =================
+  // text field
 
   Widget _buildTextField({
     required TextEditingController controller,

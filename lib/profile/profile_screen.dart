@@ -1,3 +1,4 @@
+
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
@@ -36,9 +37,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
   int selectedAvatar = 0;
   bool isLoadingAvatar = true;
 
-  // 0 = Watch List
-  // 1 = History
-  // 2 = Favorites
+  // sections
   int selectedSection = 0;
 
   final FavoriteService favoriteService =
@@ -53,9 +52,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
     loadAvatar();
   }
 
-  // ============================================================
-  // LOAD AVATAR
-  // ============================================================
+  // load avatar
 
   Future<void> loadAvatar() async {
     final User? user =
@@ -94,7 +91,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
         });
       }
     } catch (_) {
-      // Ignore avatar loading errors.
+      // avatar error
     } finally {
       if (mounted) {
         setState(() {
@@ -105,9 +102,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
     }
   }
 
-  // ============================================================
-  // UPDATE PROFILE
-  // ============================================================
+  // update profile
 
   Future<void> openUpdateProfile() async {
     final bool? updated =
@@ -149,9 +144,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
     }
   }
 
-  // ============================================================
-  // PROFILE AVATAR
-  // ============================================================
+  // profile avatar
 
   Widget buildProfileAvatar() {
     if (isLoadingAvatar) {
@@ -217,9 +210,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
     );
   }
 
-  // ============================================================
-  // LOGOUT
-  // ============================================================
+  // logout
 
   Future<void> logout() async {
     await FirebaseAuth.instance
@@ -237,9 +228,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
     );
   }
 
-  // ============================================================
-  // NAVIGATION
-  // ============================================================
+  // navigation
 
   void _onNavigationTap(
       int index,
@@ -291,9 +280,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
     );
   }
 
-  // ============================================================
-  // BUILD
-  // ============================================================
+  // build
 
   @override
   Widget build(BuildContext context) {
@@ -675,9 +662,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
     );
   }
 
-  // ============================================================
-  // GUEST PROFILE
-  // ============================================================
+  // guest profile
 
   Widget buildGuestProfile() {
     final l10n =
@@ -888,9 +873,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
   }
 }
 
-// ============================================================
-// STAT
-// ============================================================
+// stat
 
 class _Stat extends StatelessWidget {
   final String number;
@@ -937,9 +920,7 @@ class _Stat extends StatelessWidget {
   }
 }
 
-// ============================================================
-// PROFILE TAB
-// ============================================================
+// profile tab
 
 class _ProfileTab extends StatelessWidget {
   final IconData icon;

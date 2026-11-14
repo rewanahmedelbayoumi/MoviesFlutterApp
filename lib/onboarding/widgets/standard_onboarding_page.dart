@@ -1,3 +1,4 @@
+
 import 'package:flutter/material.dart';
 
 import '../onboarding_model.dart';
@@ -27,7 +28,7 @@ class StandardOnboardingPage extends StatelessWidget {
       color: OnboardingTheme.background,
       child: Stack(
         children: [
-          // ================= IMAGE =================
+          // image
 
           Positioned.fill(
             child: Image.asset(
@@ -53,7 +54,7 @@ class StandardOnboardingPage extends StatelessWidget {
             ),
           ),
 
-          // ================= SMALL IMAGE GRADIENT =================
+          // image gradient
 
           Positioned.fill(
             child: Container(
@@ -78,7 +79,7 @@ class StandardOnboardingPage extends StatelessWidget {
             ),
           ),
 
-          // ================= BOTTOM PANEL =================
+          // bottom panel
 
           Align(
             alignment: Alignment.bottomCenter,
@@ -106,7 +107,7 @@ class StandardOnboardingPage extends StatelessWidget {
                 child: Column(
                   mainAxisSize: MainAxisSize.min,
                   children: [
-                    // ================= TITLE =================
+                    // title
 
                     Text(
                       item.title,
@@ -117,27 +118,25 @@ class StandardOnboardingPage extends StatelessWidget {
                     if (item.description.isNotEmpty) ...[
                       const SizedBox(height: 24),
 
-                      // ================= DESCRIPTION =================
+                      // description
 
                       Text(
                         item.description,
                         textAlign: TextAlign.center,
-                        style:
-                        OnboardingTheme.description,
+                        style: OnboardingTheme.description,
                       ),
                     ],
 
                     const SizedBox(height: 27),
 
-                    // ================= NEXT =================
+                    // next
 
                     OnboardingButton(
-                      text:
-                      isLastPage ? 'Finish' : 'Next',
+                      text: isLastPage ? 'Finish' : 'Next',
                       onPressed: onNext,
                     ),
 
-                    // ================= BACK =================
+                    // back
 
                     if (showBack) ...[
                       const SizedBox(height: 17),
